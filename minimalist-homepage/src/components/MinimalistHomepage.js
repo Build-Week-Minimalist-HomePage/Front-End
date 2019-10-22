@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 // import plugins
 import Note from './plugins/Note';
+import Links from "./plugins/Links";
 
 const MinimalistHomepage = () => {
    const [queryTerm, setQueryTerm] = useState('');
@@ -15,7 +16,7 @@ const MinimalistHomepage = () => {
       <>
          <h1>Minimalist Homepage</h1>
          
-         
+         {/* Google Form for search*/ }
          <form method="get" action="https://www.google.com/search">
             <input type="text" 
                      name="q" 
@@ -25,7 +26,10 @@ const MinimalistHomepage = () => {
             <button>Search</button>
          </form>
          
+         {/* notepad component */}
          <Note />
+         <Links />
+
 
       </>
    );

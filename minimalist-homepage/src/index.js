@@ -10,13 +10,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';  // removed compose
 import thunk from 'redux-thunk';
 
-import linksReducer from './store/reducers/linksReducer'
+import titleReducer from './store/reducers/titleReducer'
 import noteReducer from './store/reducers/noteReducer'
 
 
 const rootReducer = combineReducers({
-   linksR : linksReducer,
-   noteR : noteReducer,
+   linksR : titleReducer,
+   //noteR : noteReducer,
 });
 
 //const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;;

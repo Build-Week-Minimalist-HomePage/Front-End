@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 import Login from "./components/Login";
@@ -8,7 +8,6 @@ import PrivateRoute from "./components/PrivateRoute";
 
 import MinimalistHomepage from './components/MinimalistHomepage';
 import Dashboard from './components/Dashboard';
-import Links from "./components/plugins/Links";
 
 import { Route, Link } from 'react-router-dom';
 

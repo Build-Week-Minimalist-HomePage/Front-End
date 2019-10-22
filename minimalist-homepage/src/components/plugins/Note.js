@@ -15,7 +15,7 @@ const Note = () => {
       <>
          <form onSubmit={handleSubmit}>
             <label>
-            Scratch Pad
+               Scratch Pad
                <textarea value={text} onChange={handleChange} />
             </label>
             <button>save</button>
