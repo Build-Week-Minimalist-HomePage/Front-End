@@ -15,8 +15,10 @@ const reducer = ( state = initialState, action ) => {
             return updateObject(state, {counter: state.counter + action.val});
         case actionTypes.SUBTRACT:
             return updateObject(state, {counter: state.counter - action.val});
+        default:
+            return state;
     }
-    return state;
+
 };
 
 export default reducer;
