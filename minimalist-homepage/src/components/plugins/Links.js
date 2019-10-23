@@ -35,6 +35,7 @@ const Title = props => {
       {!props.editing ? (
         <>
           <button className="editIcon" onClick={props.toggleEdit}>EDIT</button>
+
           <a href={props.url1}> {props.name1} </a>
           <a href={props.url2}> {props.name2} </a>
         </>
