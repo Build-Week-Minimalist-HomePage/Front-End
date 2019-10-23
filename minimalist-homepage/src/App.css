@@ -17,6 +17,19 @@
   color: white;
 }
 
+.App-header.dark {
+	background: #282c34 !important;
+	color: #fff !important;
+	transition: 0.3s all;
+}
+
+.App-header.light {
+  background: #868686 !important;
+	color: #000 !important;
+	transition: 0.5s all;
+}
+
+
 .App-link {
   color: #09d3ac;
 }

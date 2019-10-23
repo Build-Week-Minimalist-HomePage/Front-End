@@ -8,14 +8,18 @@ import PrivateRoute from "./components/PrivateRoute";
 
 import MinimalistHomepage from './components/MinimalistHomepage';
 import Dashboard from './components/Dashboard';
+import useTheme from './hooks/useTheme';
 
 import { Route, Link } from 'react-router-dom';
 
 function App() {
+  const { theme, toggleTheme } = useTheme();
+
+
   return (
     <>
       <div className="App">
-        <header className="App-header">
+        <header className={`App-header ${theme}`}>
 
           <ul>
             <li><Link to="/login">Login</Link></li>
@@ -28,7 +32,9 @@ function App() {
 
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
 
-
+          <button type="button" onClick={toggleTheme}>
+					  Switch theme
+				  </button>
           <MinimalistHomepage />
         </header>
 

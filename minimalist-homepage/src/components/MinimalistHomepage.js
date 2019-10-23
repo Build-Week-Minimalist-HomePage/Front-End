@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 
 // import plugins
 import Note from './plugins/Note';
-import Links from "./plugins/Links";
+import Links from './plugins/Links';
+import Hacker from './plugins/Hacker';
 
 const MinimalistHomepage = () => {
    const [queryTerm, setQueryTerm] = useState('');
@@ -29,6 +30,8 @@ const MinimalistHomepage = () => {
          {/* notepad component */}
          <Note />
          <Links />
+
+         <Hacker />
 
 
       </>
