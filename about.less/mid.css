@@ -1,0 +1,10 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 880px;
+}
+.teamInfo {
+  max-width: 30%;
+}

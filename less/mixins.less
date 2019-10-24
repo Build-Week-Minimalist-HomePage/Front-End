@@ -1,0 +1,43 @@
+.displayFlex(@justify: center, @flex-direction: row, @align: center, @width: 100%)
+{
+    display:flex;
+    justify-content: @justify;
+    flex-direction: @flex-direction;
+    align-items: @align;
+    width: @width;
+}
+
+.nav-mixin(@link: @link-color, @hovercolor: @link-hover, @hoverbg: @link-hbgc){
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @link;
+    padding: 1rem;
+    margin-right: 2rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+        color: @hovercolor;
+        background-color: @hoverbg;
+    }
+
+    @media @phone, @tablet {
+        background-color: @desc-color;
+    }
+}
+
+
+.button-reset(){
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-dark(){
+    color: @link-hover;
+    background-color: @link-color;
+}
+
