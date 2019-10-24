@@ -1,28 +1,14 @@
-import React, {useState} from 'react';
+import React from "react";
+import TodoForm from "./TodoForm";
+import TodoList from  "./TodoList";
 
-const Note = () => {
-   const [text, setText] = useState('');
+const Todo = () => {
+  return (
+    <div className="App">
+      <TodoForm />
+      <TodoList />
+    </div>
+  );
+};
 
-   const handleChange = (e) => {
-      setText(e.target.value);
-   }
-
-   const handleSubmit = (e) => {
-      e.preventDefault();
-   }
-
-   return (
-      <>
-         <form onSubmit={handleSubmit}>
-            <label>
-               Scratch Pad
-               <textarea value={text} onChange={handleChange} />
-            </label>
-            <button>save</button>
-      </form>
-      </>
-   )
-}
-
-
-export default Note;
+export default Todo;

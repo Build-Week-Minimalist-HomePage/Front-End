@@ -11,12 +11,12 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';  // remov
 import thunk from 'redux-thunk';
 
 import titleReducer from './store/reducers/titleReducer'
-import noteReducer from './store/reducers/noteReducer'
+import todoReducer from './store/reducers/todoReducer'
 
 
 const rootReducer = combineReducers({
    linksR : titleReducer,
-   //noteR : noteReducer,
+   todoR : todoReducer,
 });
 
 //const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;;
