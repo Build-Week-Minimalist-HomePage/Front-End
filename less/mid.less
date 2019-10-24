@@ -1,39 +1,143 @@
-.mainContainer {
-        max-width: 880px;
-        width: 100%;
-        margin: 0 auto; 
+.about{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-        
-        h2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 30px;
-            // padding-bottom: -50px;
+.mainContainer{
+  display: flex;
+  justify-content: center;
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+
+  
+
+  @media @tablet, @phone{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section{
+    width: 100vw;
+  }
+
+  h2{
+    align-content: center;
+    padding-top: 20px;
+    font-size: 2.6rem;
+    text-decoration: underline;
+
+    // padding-bottom: -50px;
+  }
+
+  .mid-section{
+    .displayFlex(center, row, center, 100%);
+    margin-top: 5em;
+
+    @media @phone, @tablet{
+      flex-wrap: wrap;
+    }
+    @media @tablet{
+      flex-direction: column;
+    }
+
+    .half{
+      .displayFlex(space-around, row, center, 100%);
+      padding: 1.5em 0 1.5em 0;
+
+      @media @phone, @tablet{
+        flex-direction: column;
+        margin: 0;
+      }
+
+      .one{
+        border: 2px solid black;
+        padding: 1em;
+        width: 25%;
+      }
+
+      .two{
+        width: 25%;
+        background-color: @karyn-blue;
+        padding: 1em;
+        color: yellow;
+      }
+
+      .three{
+        padding: 1em;
+        width: 25%;
+        background-color: blue;
+        color: yellow;
+      }
+
+      .four{
+        background-color: rgb(161, 3, 3);
+        color: white;
+        padding: 1em;
+        width: 25%;
+
+        @media @tablet, @phone {
+          margin-top: -50px;
         }
+      }
 
-    .half {
-        .displayFlex(space-evenly, row, center, 100%);
-        padding: 40px;
-    
-    .teamContainer {
+      .five{
+        padding: 1em;
+        width: 25%;
+        background-color: green;
+        color: yellow;
+      }
+
+      .teamContainer{
         .displayFlex(center, column, center, 40%);
+        align-items: center;
         padding-top: 2rem;
 
-        .teamInfo {
-            background-color: khaki;
+        img{
+          height: 20em;
+          width: 20em;
+          padding: 25px;
+          border-radius: 100%;
         }
-        
-        img {
-            padding: 25px;
-            border-radius: 100%;
-            }
- 
 
+        .teamInfo{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          text-align: center;
+          line-height: 3em;
+
+
+          .name{
+            font-size: 3rem;
+          }
+          .cohort{
+            font-size: 1.5rem;
+          }
+
+          .worked-on{
+            font-size: 2rem;
+          }
         }
+      }
     }
-
-    section {
-        flex-wrap: wrap;
-    }
+  }
 }
+    .top {
+
+    margin: 0;
+    @media @phone {
+      padding: 0;
+    }
+    .bottom {
+        background-color: black;
+      @media @phone {
+        padding: 0;
+      }
+    }
+  }
