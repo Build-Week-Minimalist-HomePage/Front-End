@@ -1,6 +1,7 @@
 export const ADD_TASK = "ADD_TASK";
 export const TOGGLE_TASK = "TOGGLE_TASK";
 export const CLEAR_COMPLETED = "CLEAR_COMPLETED";
+export const FILTER_NOTE = 'FILTER_NOTE';
 
 export const addTask = task => {
   return {
@@ -9,12 +10,22 @@ export const addTask = task => {
   };
 };
 
+
 export const toggleTask = id => {
   return {
     type: TOGGLE_TASK,
     payload: id
   };
 };
+
+
+
+export const delNote = id => {
+   return {
+     type: FILTER_NOTE,
+     payload: id
+   };
+ };
 
 export const clearCompleted = () => {
   return {

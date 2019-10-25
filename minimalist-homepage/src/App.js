@@ -9,6 +9,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import MinimalistHomepage from './components/MinimalistHomepage';
 import Dashboard from './components/Dashboard';
 import useTheme from './hooks/useTheme';
+import Nav from './components/Nav'
 
 import { Route, Link } from 'react-router-dom';
 
@@ -18,7 +19,9 @@ function App() {
 
   return (
     <>
+
       <div className="App">
+
         <header className={`App-header ${theme}`}>
 
           <ul>
@@ -26,6 +29,8 @@ function App() {
             <li><Link to="/register">Register</Link></li>
             <li><Link to="/dashboard">Dashboard</Link></li>
           </ul>
+
+          
 
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />

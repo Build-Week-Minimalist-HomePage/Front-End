@@ -1,16 +1,14 @@
-import { ADD_TASK, TOGGLE_TASK, CLEAR_COMPLETED } from "../actions/todoActions";
+import { ADD_TASK, TOGGLE_TASK, CLEAR_COMPLETED, FILTER_NOTE } from "../actions/todoActions";
 
 const initialState = {
   tasks: [
     {
       id: 1234,
       task: "do dishes",
-      completed: false
     },
     {
       id: 1235,
       task: "car wash",
-      completed: false
     }
   ]
 };
@@ -21,7 +19,6 @@ const todoReducer = (state = initialState, action) => {
       let newTask = {
         id: Date.now(),
         task: action.payload,
-        completed: false
       };
       return {
         ...state,
@@ -47,6 +44,15 @@ const todoReducer = (state = initialState, action) => {
         ...state,
         tasks: state.tasks.filter(item => !item.completed)
       };
+
+      case FILTER_NOTE:
+         let keptNotes = state.tasks.filter(thing => thing.id != action.payload )
+
+         return {
+           ...state,
+           tasks: keptNotes
+         };
+
     default:
       return state;
   }

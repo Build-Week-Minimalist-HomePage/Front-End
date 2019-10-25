@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTask, clearCompleted } from "../../store/actions/todoActions";
+import {axiosWithAuth} from '../../axiosWithAuth';
 
 const TodoForm = props => {
   const [input, setInput] = useState("");
@@ -12,8 +13,13 @@ const TodoForm = props => {
   const submitHandler = event => {
     event.preventDefault();
     props.addTask(input);
+
+    axiosWithAuth()
+         .post(`/api/notes/`, {"user_id": 1, 'note':input}).then(res=>console.log(res));
     setInput("");
   };
+
+  
 
   return (
     <div>

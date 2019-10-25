@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import Note from './plugins/Note';
 import Links from './plugins/Links';
 import Hacker from './plugins/Hacker';
+import Todo2 from './plugins/Todo2';
 
 const MinimalistHomepage = () => {
    const [queryTerm, setQueryTerm] = useState('');
@@ -32,6 +33,8 @@ const MinimalistHomepage = () => {
          <Links />
 
          <Hacker />
+         <Todo2/>
+         
 
 
       </>
